@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Show Date</h2>
+
+  <h3 id="showdate"></h3>
+  <button onclick="displayDate()">Show Date</button>
+
+  <script>
+  function displayDate() {
+    document.getElementById("showdate").innerHTML = Date();
+  }
+  </script>
+
+
+<h2>Light Bulb</h2>
+<button onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="images/pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'">Turn off the light</button>
+
+<h2>Button</h2>
+<button onclick="showAlert()">Click me</button>
+
+
+<h2>Tooltip</h2>
+<div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span>
+</div>
+
+</body>
+</html>

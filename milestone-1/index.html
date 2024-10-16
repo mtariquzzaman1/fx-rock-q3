@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS m1</title>
+</head>
+<body>
+
+    <h2>Sum</h2>
+    <script>
+        document.write(9 + 19);
+    </script>
+
+
+    <h2>Change inner html value</h2>
+    <p id="value"></p>
+    <script>
+        let a = 3;
+        let x = (100 + 50) * a;
+        document.getElementById("value").innerHTML = x;
+    </script>
+
+    <h2>Functions</h2>
+    <p id="funct"></p>
+
+    <script>
+    let v = myFunction(7, 5);
+    document.getElementById("funct").innerHTML = v;
+
+    function myFunction(a, b) {
+    return a * b;
+    }
+    </script>
+
+    <h2>Search index</h2>
+    <p>Paragraph is to big, Find the info.</p>
+    <p id="infofind"></p>
+
+    <script>
+        let text = "Find 'big' index";
+        let index = text.indexOf("big");
+        document.getElementById("infofind").innerHTML = index; 
+    </script>
+
+
+
+    <h2>If/Else</h2>
+
+    <p id="efelse">Good Evening!</p>
+
+    <script>
+    if (new Date().getHours() < 18) {
+    document.getElementById("efelse").innerHTML = "Good day!";
+    }
+    </script>
+
+
+    <h2>While Loop</h2>
+    <p id="numbs"></p>
+
+    <script>
+        let ab = "";
+        let i = 0;
+        while (i < 6) {
+            ab += "<br>" + i;
+            i++;
+        }
+        document.getElementById("numbs").innerHTML = ab;
+    </script>
+
+    
+</body>
+</html>

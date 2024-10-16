@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mile 3</title>
+  <style>
+    #styledText {
+      padding: 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s, font-size 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Add and Style Text</h1>
+
+<div class="styler-container">
+  <label for="newText">Change Text:</label>
+  <input type="text" id="newText" placeholder="Enter new text"><br>
+  
+  <label for="textColor">Text Color:</label>
+  <input type="color" id="textColor" value="#d3d3d3"><br>
+
+  <label for="bgColor">Background Color:</label>
+  <input type="color" id="bgColor" value="#d3d3d3"><br>
+  
+  <label for="fontSize">Font Size (px):</label>
+  <input type="number" id="fontSize" placeholder="16" value="16" min="8" max="72"><br>
+  
+  <button onclick="applyStyles()">Apply Changes</button>
+</div>
+
+<p id="styledText"></p>
+
+<script>
+
+  function applyStyles() {
+    const newText = document.getElementById('newText').value;
+    const textColor = document.getElementById('textColor').value;
+    const bgColor = document.getElementById('bgColor').value;
+    const fontSize = document.getElementById('fontSize').value;
+    
+    const styledText = document.getElementById('styledText');
+    
+    if (newText.trim() !== '') {
+      styledText.textContent = newText;
+    }
+
+    styledText.style.color = textColor;
+    styledText.style.backgroundColor = bgColor;
+    styledText.style.fontSize = fontSize + 'px';
+  }
+</script>
+
+
+
+
+
+<h2>Characters Counter</h2>
+<textarea id="getchar" placeholder="Type here"></textarea>
+<p id="characters">Characters: 0</p>
+
+<script>
+  let getchar = document.getElementById('getchar');
+  let characters = document.getElementById('characters');
+  
+  getchar.addEventListener('input', function() {
+    let count = getchar.value.length;
+    characters.textContent = `Characters: ${count}`;
+  });
+</script>
+
+
+
+
+
+</body>
+</html>

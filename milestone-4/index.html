@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<h2>Type and view</h2>
+<label for="typeinfo">Type Here </label>
+<input type="text" id="typeinfo" placeholder="Typing...">
+<p id="display">You typed: <span id="showtext"></span></p>
+
+<script>
+  const typeinfo = document.getElementById('typeinfo');
+  const showtext = document.getElementById('showtext');
+  
+  // Update the text as the user types in the fuc
+  typeinfo.addEventListener('input', function() {
+    showtext.textContent = typeinfo.value;
+  });
+</script>
+
+
+
+<h1>Hover Event</h1>
+
+<div id="hoverobj">Hover over me!</div>
+
+<script>
+  const hoverobj = document.getElementById('hoverobj');
+ 
+  hoverobj.addEventListener('mouseover', function() {
+    hoverobj.style.backgroundColor = 'lightgreen';
+    hoverobj.style.color = 'white';
+  });
+  
+  hoverobj.addEventListener('mouseout', function() {
+    hoverobj.style.backgroundColor = 'lightblue';
+    hoverobj.style.color = 'white';
+  });
+</script>
+
+
+</body>
+</html>
